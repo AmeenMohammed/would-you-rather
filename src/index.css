@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.center{
+  text-align: center;
+}
+.submit-btn {
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  width: 100%;
+  margin: 10px auto;
+  padding: 0.5em 0;
+  font-size: 1em;
+}
