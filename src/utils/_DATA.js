@@ -2,7 +2,7 @@ let users = {
   sarahedo: {
     id: 'sarahedo',
     name: 'Sarah Edo',
-    avatarURL: "https://www.google.com/search?q=anime+pics&safe=active&sxsrf=ALeKk03bdU3rbi46vtEJH4BfTP6TtEuAfA:1582821076123&tbm=isch&source=iu&ictx=1&fir=PvsK7u34HljGtM%253A%252Cv7U7-exZHXh0bM%252C_&vet=1&usg=AI4_-kQPGjrqqoAxTRKuj-EIgkaWSna0sw&sa=X&ved=2ahUKEwi2o_D_k_LnAhVL5eAKHZwTA7MQ9QEwAHoECAcQMA#imgrc=CKW0WdW6SBkgXM",
+    avatarURL: process.env.PUBLIC_URL +'/image/user1.jpg',
     answers: {
       "8xf0y6ziyjabvozdd253nd": 'optionOne',
       "6ni6ok3ym7mf1p33lnez": 'optionTwo',
@@ -14,7 +14,7 @@ let users = {
   tylermcginnis: {
     id: 'tylermcginnis',
     name: 'Tyler McGinnis',
-    avatarURL: "https://www.google.com/search?q=kaneki&tbm=isch&ved=2ahUKEwj4_taFlPLnAhUIZxoKHZezCgsQ2-cCegQIABAA&oq=kaneki&gs_l=img.3..35i39j0i67l8j0.47628.48457..48814...0.0..0.148.838.0j6......0....1..gws-wiz-img.WWL7r78N85o&ei=4O5XXviOEYjOaZfnqlg&safe=active#imgrc=AslI3U9ch6iD4M",
+    avatarURL:process.env.PUBLIC_URL +'/image/user2.jpg',
     answers: {
       "vthrdm985a262al8qx3do": 'optionOne',
       "xj352vofupe1dqz9emx13r": 'optionTwo',
@@ -24,7 +24,7 @@ let users = {
   johndoe: {
     id: 'johndoe',
     name: 'John Doe',
-    avatarURL: "https://www.google.com/search?q=l+death+note&tbm=isch&ved=2ahUKEwimuvadlPLnAhVZw4UKHQHfB7oQ2-cCegQIABAA&oq=l+dea&gs_l=img.1.0.0i67l3j0l7.26408.29216..30989...4.0..0.145.671.0j5......0....1..gws-wiz-img.....10..35i39j35i362i39.IvbeSkEZ8ho&ei=E-9XXubkB9mGlwSBvp_QCw&safe=active#imgrc=ppnBHaZVosRiFM",
+    avatarURL: process.env.PUBLIC_URL +'/image/user3.jpg',
     answers: {
       "xj352vofupe1dqz9emx13r": 'optionOne',
       "vthrdm985a262al8qx3do": 'optionTwo',

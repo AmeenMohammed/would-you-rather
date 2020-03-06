@@ -4,6 +4,22 @@ import Select from 'react-select'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { setAuthedUser } from '../actions/authedUser'
 
+  const colourStyles = {
+    option: (styles, { value }) => {
+      const { avatarURL } = value
+      return {
+        background: `url(${process.env.PUBLIC_URL + avatarURL}) no-repeat`,
+        backgroundSize: '40px',
+        backgroundPosition: '10px 10px',
+
+        height: '40px',
+        ...styles,
+        paddingLeft: '60px',
+        paddingTop: '10px',
+        margin: '3px 0'
+      };
+    },
+  };
 class Login extends Component{
     state = {
         user: ''
@@ -33,11 +49,13 @@ class Login extends Component{
             <div className="row">
               <div className="col-md-3"></div>
               <div className="col-md-6">
-                  <h3 className='center'>Sign In</h3>
+              <h3>Welcome to the Would You Rather App!</h3>
+                <h3 className='center'>Please sign in to continue</h3>
                  <form onSubmit={this.handleSubmit}>
                      <Select
                          onChange={this.handleChange}
                          placeholder={'Select User'}
+                         styles={colourStyles}
                          options={
                           Object.keys(users).map((id)=>(
                           {
