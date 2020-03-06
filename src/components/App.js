@@ -5,8 +5,8 @@ import { handleInitialData } from '../actions/shared'
 // import Login from './Login'
 // import Home from './Home';
 // import Nav from './Nav';
-// import LoadingBar from 'react-redux-loading'
-import Dashboard from './Dashboard';
+import LoadingBar from 'react-redux-loading'
+import Dashboard from './Dashboard'
 
 
 class App extends Component {
@@ -16,11 +16,14 @@ class App extends Component {
   render(){
     const { authedUser } = this.props
     return(
+      <Router>
       <Fragment>
-        {/* {authedUser === null? null:( */}
+      <LoadingBar />
+        {authedUser === null? null:(
           <Dashboard/>
-        // )}
+        )}
       </Fragment>
+      </Router>
     )
   }
 

@@ -2,8 +2,15 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 class Dashboard extends Component {
+
   state = {
     showUnanswered: true,
+  }
+  showUnansweredQuestions = () => {
+    this.setState(() => ({ showUnanswered: true }))
+  }
+  showansweredQuestions = () => {
+    this.setState(() => ({ showUnanswered: false }))
   }
   render () {
     const { showUnanswered } = this.state
@@ -14,12 +21,13 @@ class Dashboard extends Component {
     console.log(unansweredIds)
     return (
       <div>
-        <header>
-          <ul>
-            <li className={unansweredQuestionsClass} >
+        <header >
+          <ul className='center'>
+            <li className={unansweredQuestionsClass}  onClick={this.showUnansweredQuestions}>
               Unanswered Questions
             </li>
-            <li className={answeredQuestionsClass} >
+            
+            <li className={answeredQuestionsClass} onClick={this.showansweredQuestions}>
               Answered Questions
             </li>
           </ul>
