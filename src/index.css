@@ -23,3 +23,7 @@ code {
   padding: 0.5em 0;
   font-size: 1em;
 }
+.activeQuestions {
+  color: #8973a7;
+  font-weight: 600;
+}

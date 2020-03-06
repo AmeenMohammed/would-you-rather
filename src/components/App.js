@@ -2,10 +2,11 @@ import React, {Component, Fragment} from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { connect } from 'react-redux'
 import { handleInitialData } from '../actions/shared'
-import Login from './Login'
-import Home from './Home';
-import Nav from './Nav';
-import LoadingBar from 'react-redux-loading'
+// import Login from './Login'
+// import Home from './Home';
+// import Nav from './Nav';
+// import LoadingBar from 'react-redux-loading'
+import Dashboard from './Dashboard';
 
 
 class App extends Component {
@@ -15,23 +16,11 @@ class App extends Component {
   render(){
     const { authedUser } = this.props
     return(
-      <Router>
-      <div>
-        {authedUser === null?(
-          <Route render={()=>(
-            <Login />
-          )}/>
-          
-        ):(
-          <Fragment>
-          <LoadingBar />
-          <Nav />
-          <Route exact path='/' component={Home}/>
-          </Fragment>
-        )}
-        
-      </div>
-      </Router>
+      <Fragment>
+        {/* {authedUser === null? null:( */}
+          <Dashboard/>
+        // )}
+      </Fragment>
     )
   }
 
