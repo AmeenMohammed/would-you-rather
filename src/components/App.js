@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { connect } from 'react-redux'
 import { handleInitialData } from '../actions/shared'
 import Login from './Login'
+import Home from './Home';
+
 
 class App extends Component {
   componentDidMount(){
@@ -19,7 +21,7 @@ class App extends Component {
           )}/>
           
         ):(
-          <Route exact path='/'/>
+          <Route exact path='/' component={Home}/>
         )}
         
       </div>
