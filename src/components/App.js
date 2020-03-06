@@ -5,6 +5,7 @@ import { handleInitialData } from '../actions/shared'
 import Login from './Login'
 import Home from './Home';
 import Nav from './Nav';
+import LoadingBar from 'react-redux-loading'
 
 
 class App extends Component {
@@ -23,6 +24,7 @@ class App extends Component {
           
         ):(
           <Fragment>
+          <LoadingBar />
           <Nav />
           <Route exact path='/' component={Home}/>
           </Fragment>
