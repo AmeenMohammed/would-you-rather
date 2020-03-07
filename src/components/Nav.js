@@ -17,19 +17,19 @@ class Nav extends Component {
     const { avatar, name } = this.props;
 
     return (
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg nav-bar">
         <ul className="navbar-nav mr-auto">
-          <li className="nav-item active">
+          <li className="nav-item">
             <Link to='/' exact  className="nav-link">
               Home
             </Link>
           </li>
-          <li className="nav-item active">
+          <li className="nav-item">
             <Link to='/add'  className="nav-link">
               New Question
             </Link>
           </li>
-          <li className="nav-item active">
+          <li className="nav-item">
             <Link to='/leaderboard' className="nav-link">
               Leader Board
             </Link>

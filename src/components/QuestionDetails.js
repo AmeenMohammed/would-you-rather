@@ -15,18 +15,18 @@ class QuestionDetails extends Component {
 
     return (
       <div className='question-details'>
+        <div className='question-header'>
         <img
           src={avatar}
           alt={`Avatar of ${name}`}
           className='avatar'
-        />
-        <div className='question'>
-          <div>
-            <span>
-              <strong>{name} asks: </strong>
-              <em>Would you rather?</em>
-            </span>
-            <br/>
+            />
+            <div className='question-title'>
+              {name} Asks:
+              <em> Would you rather?</em>
+            </div>
+         </div>
+         <div className='question-info'>  
             <p>
               {optionOneText} 
               <strong> or </strong>
@@ -35,8 +35,7 @@ class QuestionDetails extends Component {
             <Link to={`/questions/${id}`} className='question-link'>
                 View Poll
             </Link>
-          </div>
-        </div>
+            </div>
       </div>
     )
   }

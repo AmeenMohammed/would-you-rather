@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import QuestionDetails from './QuestionDetails'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Dashboard extends Component {
 
@@ -22,22 +23,21 @@ class Dashboard extends Component {
     console.log(unansweredIds)
     return (
       <div>
-        <header >
-          <ul className='center'>
-            <li className={unansweredQuestionsClass}  onClick={this.showUnansweredQuestions}>
-              Unanswered Questions
-            </li>
-            
-            <li className={answeredQuestionsClass} onClick={this.showansweredQuestions}>
-              Answered Questions
-            </li>
-          </ul>
-        </header>
+      <div class="row">
+        <div class="col-md-6">
+          <h3 className={unansweredQuestionsClass} onClick={this.showUnansweredQuestions}>UnAnswered Questions</h3>
+        </div>
+        <div class="col-md-6">
+        < h3 className={answeredQuestionsClass} onClick={this.showansweredQuestions}>Answered Questions</h3>
+        </div>
+      </div>
+      <div>
         <ul>
           {questionsIds.map((id) => (
             <QuestionDetails key={id} id={id}/>
             ))}
         </ul>
+        </div>
       </div>
     )
   }

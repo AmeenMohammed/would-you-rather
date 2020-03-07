@@ -7,6 +7,7 @@ import { handleInitialData } from '../actions/shared'
 // import Nav from './Nav';
 import LoadingBar from 'react-redux-loading'
 import Dashboard from './Dashboard'
+import Nav from './Nav';
 
 
 class App extends Component {
@@ -18,6 +19,7 @@ class App extends Component {
     return(
       <Router>
       <Fragment>
+        <Nav/>
       <LoadingBar />
         {authedUser === null? null:(
           <Dashboard/>
