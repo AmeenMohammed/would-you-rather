@@ -10,3 +10,25 @@ export function formatQuestion (question, author) {
       avatar: avatarURL,
     }
   }
+  export function formatUserScore (user) {
+    const { id, name, answers, questions, avatarURL } = user
+    const answered = Object.keys(answers).length
+    const created = questions ? questions.length : 0
+    return {
+      id,
+      name,
+      avatar: avatarURL,
+      answered: answered,
+      created: created,
+      score: (answered + created)
+    }
+  }
+  
+  
+  
+  export function calculateUserScore (user) {
+    const { answers, questions } = user
+    const answered = Object.keys(answers).length
+    const created = questions ? questions.length : 0
+    return answered + created
+  }
