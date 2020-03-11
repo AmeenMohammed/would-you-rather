@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { handleAddQuestion } from '../actions/questions'
 
 class NewQuestion extends Component {
 
@@ -23,10 +25,10 @@ class NewQuestion extends Component {
     e.preventDefault()
 
     const { optionOne, optionTwo } = this.state
+    const { dispatch } = this.props
 
+    dispatch(handleAddQuestion(optionOne, optionTwo))
 
-    //add to store
-    
     this.setState(() => ({
       optionOne: '',
       optionTwo: '',
@@ -65,4 +67,4 @@ class NewQuestion extends Component {
   }
 }
 
-export default NewQuestion
+export default connect()(NewQuestion)
