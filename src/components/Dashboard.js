@@ -23,11 +23,11 @@ class Dashboard extends Component {
     console.log(unansweredIds)
     return (
       <div>
-      <div class="row">
-        <div class="col-md-6">
+      <div className="row">
+        <div className="col-md-6">
           <h3 className={unansweredQuestionsClass} onClick={this.showUnansweredQuestions}>UnAnswered Questions</h3>
         </div>
-        <div class="col-md-6">
+        <div className="col-md-6">
         < h3 className={answeredQuestionsClass} onClick={this.showansweredQuestions}>Answered Questions</h3>
         </div>
       </div>

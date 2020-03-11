@@ -7,6 +7,7 @@ import LoadingBar from 'react-redux-loading'
 import Dashboard from './Dashboard'
 import Nav from './Nav';
 import LeaderBoard from './LeaderBoard'
+import NewQuestion from './NewQuestion'
 
 
 
@@ -25,6 +26,7 @@ class App extends Component {
           <Switch>
           <Route path='/' exact component={Dashboard} />
          <Route path='/leaderboard' exact component={LeaderBoard} />
+         <Route path='/add' exact component={NewQuestion} />
          </Switch>
         )}
       </Fragment>

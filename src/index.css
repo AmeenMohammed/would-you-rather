@@ -50,14 +50,14 @@ code {
 .question-link {
   text-decoration: none;
   padding: 6px 16px;
-  color: rgba(1, 89, 129, 0.966);
-  border: 1px solid rgba(1, 89, 129, 0.966);
+  color: #0164a5;
+  border: 1px solid #0164a5;
   background-color: white;
   border-radius: 16px
 }
 .question-header {
   height: 70px;
-  background-color: rgba(1, 89, 129, 0.966);
+  background-color: #0164a5;
   color: white;
   font-size: 16px;
   line-height: 1.4;
@@ -70,7 +70,7 @@ code {
   text-align: center;
 }
 .nav-bar, .nav-link{
-  background-color: rgba(1, 89, 129, 0.966);
+  background-color: #0164a5;
   color: white;
 }
 
@@ -85,21 +85,50 @@ code {
 /* Control the left side */
 .left {
   left: 0;
-  background-color: rgba(1, 89, 129, 0.966);
+  background-color: #0164a5;
 }
 
 /* Control the right side */
 .right {
   right: 0;
-  background-color: rgba(1, 89, 129, 0.966);
+  background-color: #0164a5;
 }
 
-/* If you want the content centered horizontally and vertically */
 .centered {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color:rgba(1, 89, 129, 0.966);
+  color:#0164a5;
+}
+
+.new-question {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.question-option{
+  width: 400px;
+  border-radius: 2px;
+  border: 1px solid #CCC;
+  padding: 10px;
+  color: #333;
+  font-size: 14px;
+  margin: 10px;
+}
+.button{
+  padding: 10px 25px 8px;
+  color: #fff;
+  background-color: #0067ab;
+  text-shadow: rgba(0,0,0,0.24) 0 1px 0;
+  font-size: 16px;
+  box-shadow: rgba(255,255,255,0.24) 0 2px 0 0 inset,#fff 0 1px 0 0;
+  border: 1px solid #0164a5;
+  border-radius: 2px;
+  margin-top: 10px;
+  margin-left: 10px;
+  cursor:pointer;
 }
