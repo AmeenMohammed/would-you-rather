@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { calculateUserScore, formatUserScore } from '../utils/helpers'
+import { formatScores } from '../utils/helpers'
 import Score from './Score'
 
 class LeaderBoard extends Component {
@@ -20,13 +20,11 @@ class LeaderBoard extends Component {
   }
 }
 
-function mapStateToProps({ users }) {
-  const userScoresIds = Object.keys(users).sort((a,b) => calculateUserScore(users[b]) - calculateUserScore(users[a]))
-  const userScores = users ? userScoresIds.map(id => formatUserScore(users[id])) : []
+function mapStateToProps({ users, questions }) {
+  const userScoresNew = users ? Object.keys(users).map(id => formatScores(users[id], questions)) : []
 
   return {
-    userScores:  userScores
+    userScores:  userScoresNew.sort((a,b) => b.score - a.score)
   }
 }
-
 export default connect(mapStateToProps)(LeaderBoard)
