@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { formatQuestion } from '../utils/helpers'
+import QuestionValue from './QuestionValue'
 
 class QuestionPage extends Component {
   render() {
@@ -17,7 +18,7 @@ class QuestionPage extends Component {
     return (
       <div>
         { results.answeredQuestion === true
-          ? <p>show results</p>
+          ? <QuestionValue results={results}/>
           :  <p>show answer</p>}
       </div>
     )
