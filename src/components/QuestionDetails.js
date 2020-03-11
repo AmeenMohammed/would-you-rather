@@ -41,14 +41,13 @@ class QuestionDetails extends Component {
   }
 }
 
-function mapStateToProps ({users, questions}, { id }) {
+function mapStateToProps ({authedUser, users, questions}, { id }) {
   const question = questions[id]
 
   return {
     details: question
-      ? formatQuestion (question, users[question.author])
+      ? formatQuestion (question, users[question.author], authedUser)
       : null
   }
 }
-
 export default connect(mapStateToProps)(QuestionDetails)
