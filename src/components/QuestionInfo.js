@@ -17,7 +17,7 @@ class QuestionPage extends Component {
     return (
       <div>
         { results.answeredQuestion === true
-          ? <P>show results</P>
+          ? <p>show results</p>
           :  <p>show answer</p>}
       </div>
     )
