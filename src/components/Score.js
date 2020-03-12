@@ -2,7 +2,7 @@ import React from 'react'
 
 function UserScore(props) {
   const { user } = props
-  const { id, name, avatar, answered, created, score } = user
+  const {name, avatar, answered, created, score } = user
 
   return  <div className='question-details'>
             <div className='question-header'>

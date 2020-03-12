@@ -9,13 +9,13 @@ class Nav extends Component {
 
   handleLogout = ()=> {
     const { history, dispatch } = this.props;
-    dispatch(setAuthedUser(''));
+    dispatch(setAuthedUser(null));
     history.push('/');
   }
 
   render(){
-    const { avatar, name } = this.props;
-
+    const { authedUser, user } = this.props
+    const { name, avatarURL } = user
     return (
       <nav className="navbar navbar-expand-lg nav-bar">
         <ul className="navbar-nav mr-auto">
@@ -34,11 +34,20 @@ class Nav extends Component {
               Leader Board
             </Link>
           </li>
-          <li className="nav-item active">
-            <a className="nav-link" onClick={this.handleLogout}>
-              Log out
-            </a>
-          </li>
+          { authedUser === null
+              ? null
+              : <li>
+                  <span>{name} </span>
+                  <img
+                    src={avatarURL}
+                    alt={`Avatar of ${name}`}
+                    className='avatar'
+                  />
+
+                  <a href='/' className='nav-link' onClick={this.logoutUser}>
+                    Logout
+                  </a>
+                </li>}
         </ul>
 
         <hr />
@@ -46,5 +55,13 @@ class Nav extends Component {
     )
   }
 }
+function mapStateToProps ({authedUser, users}) {
+  const user = authedUser ? users[authedUser] : {}
 
-export default withRouter(connect()(Nav));
+  return {
+    user: user,
+    authedUser,
+  }
+}
+export default withRouter(connect(mapStateToProps)(Nav))
+
