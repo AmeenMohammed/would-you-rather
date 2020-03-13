@@ -36,7 +36,7 @@ class Nav extends Component {
           </li>
           { authedUser === null
               ? null
-              : <li>
+              :<div className='nav-right'> <li>
                   <span>{name} </span>
                   <img
                     src={avatarURL}
@@ -47,7 +47,7 @@ class Nav extends Component {
                   <a href='/' className='nav-link' onClick={this.logoutUser}>
                     Logout
                   </a>
-                </li>}
+                </li></div>}
         </ul>
 
         <hr />

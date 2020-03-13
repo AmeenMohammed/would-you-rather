@@ -139,8 +139,8 @@ code {
   border-radius: 25px;
 
  }
- .user-info{
-  float: right;  
+ .nav-right{
+   right: 0em;
  }
 
  .dashboard {
