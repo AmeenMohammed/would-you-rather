@@ -44,7 +44,7 @@ export function receiveQuestions( questions ){
       const { authedUser } = getState()
       return saveQuestionAnswer({
         authedUser: authedUser,
-        id: id,
+        qid: id,
         answer: answer,
       })
       .then(() => dispatch(addAnswer(id, answer, authedUser)))

@@ -6,7 +6,7 @@ import QuestionOptions from './QuestionOptions.js'
 
 class QuestionPage extends Component {
   render() {
-    const { noMatch, showContent, results } = this.props
+    const { noMatch, showContent, results, dispatch } = this.props
 
     if (showContent === false) {
       return null
@@ -20,7 +20,7 @@ class QuestionPage extends Component {
       <div>
         { results.answeredQuestion === true
           ? <QuestionValue results={results}/>
-          : <QuestionOptions results={results}/>}
+          : <QuestionOptions results={results} dispatch={dispatch}/>}
       </div>
     )
   }
