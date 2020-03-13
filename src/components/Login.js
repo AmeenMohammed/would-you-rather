@@ -22,7 +22,7 @@ import { setAuthedUser } from '../actions/authedUser'
   };
 class Login extends Component{
     state = {
-        user: ''
+        user: null
       }
       handleSubmit = (e) => {
         e.preventDefault();
@@ -30,7 +30,7 @@ class Login extends Component{
         const { dispatch } = this.props;
         const { user } = this.state;
         //todo : go to home
-        if(user !== '') {
+        if(user !== null) {
           dispatch(setAuthedUser(user))
         }
       }
