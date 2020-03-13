@@ -49,7 +49,7 @@ class Login extends Component{
             <div className="row">
               <div className="col-md-3"></div>
               <div className="col-md-6">
-              <h3>Welcome to the Would You Rather App!</h3>
+              <h3 className='center'>Welcome to Would You Rather App!</h3>
                 <h3 className='center'>Please sign in to continue</h3>
                  <form onSubmit={this.handleSubmit}>
                      <Select

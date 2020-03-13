@@ -22,15 +22,21 @@ class Dashboard extends Component {
     const questionsIds = showUnanswered ? unansweredIds : answeredIds
     console.log(unansweredIds)
     return (
-      <div>
-      <div className="row">
-        <div className="col-md-6">
-          <h3 className={unansweredQuestionsClass} onClick={this.showUnansweredQuestions}>UnAnswered Questions</h3>
+      <div className='container'>
+        <table className='table dashboard'>
+          <tbody>
+          <tr>
+          <th className='unanswered'><h3 className={unansweredQuestionsClass} onClick={this.showUnansweredQuestions}>UnAnswered Questions</h3></th>
+          <th>< h3 className={answeredQuestionsClass} onClick={this.showansweredQuestions}>Answered Questions</h3></th>
+          </tr>
+          </tbody>
+        </table>
+      {/* <div className="row sub-page-menu dashboard">
+        <div className="col-xs-6 unanswered">
         </div>
-        <div className="col-md-6">
-        < h3 className={answeredQuestionsClass} onClick={this.showansweredQuestions}>Answered Questions</h3>
+        <div className="col-xs-6 answered">
         </div>
-      </div>
+    </div> */}
       <div>
         <ul>
           {questionsIds.map((id) => (
